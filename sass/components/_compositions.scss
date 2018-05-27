@@ -1,0 +1,39 @@
+.composition{
+ position: relative;
+ &__img{
+  width: 40%;
+  position: absolute;
+  z-index: 1;
+  transition: all .1s ;
+  outline-offset: 2rem;
+
+   &-p1{
+    left: 0;
+    top: 0;
+   }
+   &-p2{
+    left: 20rem;
+    top: 0;
+   }
+
+   &-p3{
+    left: 20%;
+    top: 10rem;
+   }
+  }
+
+  &__img:hover {
+
+    z-index: 20;
+    transform: scale(1.1);
+    margin: 1.5rem;
+    outline: .5rem solid $color-primary;
+  }
+
+  &:hover &__img:not(:hover){
+    transform: scale(0.60);
+    // border: 5px solid $color-primary;
+  }
+ 
+
+}
