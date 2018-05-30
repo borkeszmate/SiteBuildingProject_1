@@ -147,3 +147,37 @@
   margin-top: -20rem;
 }
 
+.section-recoms{
+
+  &__container{
+    margin: 20rem auto;
+    width: 70%;
+    background-color: rgba($color-gray-primary,.2);
+    transform: skewY(-4deg);
+    // position: relative;
+    padding: 5rem 4rem;
+    
+    &__anti-break-container{
+      transform: skewY(4deg);
+    }
+    
+    
+    &__img-container{
+      position: relative;
+
+      img{
+        
+        
+        width:100%;
+        border-radius: 100%;
+      }
+    }
+    &__text-container{
+      p{
+        text-align: justify;
+      }
+    }
+
+  }
+}
+

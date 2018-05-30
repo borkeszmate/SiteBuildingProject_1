@@ -68,9 +68,14 @@ body {
 body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 1.7;
   color: #777; }
+
+.heading-tertiary {
+  font-size: 2rem;
+  font-weight: 300;
+  text-transform: uppercase; }
 
 .mt-1 {
   margin-top: 5rem; }
@@ -179,6 +184,22 @@ body {
   height: 80rem;
   background-color: #f7f7f7;
   margin-top: -20rem; }
+
+.section-recoms__container {
+  margin: 20rem auto;
+  width: 70%;
+  background-color: rgba(170, 170, 170, 0.2);
+  transform: skewY(-4deg);
+  padding: 5rem 4rem; }
+  .section-recoms__container__anti-break-container {
+    transform: skewY(4deg); }
+  .section-recoms__container__img-container {
+    position: relative; }
+    .section-recoms__container__img-container img {
+      width: 100%;
+      border-radius: 100%; }
+  .section-recoms__container__text-container p {
+    text-align: justify; }
 
 .btn-primary:link, .btn-primary:visited {
   text-transform: uppercase;
