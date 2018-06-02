@@ -190,16 +190,21 @@ body {
   width: 70%;
   background-color: rgba(170, 170, 170, 0.2);
   transform: skewY(-4deg);
-  padding: 5rem 4rem; }
+  padding: 4rem 4rem; }
   .section-recoms__container__anti-break-container {
     transform: skewY(4deg); }
   .section-recoms__container__img-container {
     position: relative;
     width: 100%;
-    background-color: red; }
-    .section-recoms__container__img-container__test {
-      -webkit-shape-outside: circle(50% at 50% 50%);
-      shape-outside: circle(50% at 50% 50%); }
+    clip-path: circle(37%);
+    z-index: 200; }
+    .section-recoms__container__img-container__img-hover-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      background-color: black; }
     .section-recoms__container__img-container p {
       position: absolute;
       top: 50%;
@@ -207,12 +212,25 @@ body {
       color: rgba(255, 255, 255, 0);
       transform: translate(-50%, -50%);
       font-size: 3rem;
-      transition: all .3s; }
+      transition: all .5s ease; }
     .section-recoms__container__img-container img {
-      width: 100%; }
-  .section-recoms__container__img-container:hover p {
-    color: white; }
-  .section-recoms__container__text-container p {
+      transition: all .5s ease;
+      width: 100%;
+      transform: scale(1.2);
+      z-index: 2; }
+  .section-recoms__container__img-container:hover {
+    background-color: #0074D9;
+    z-index: 20; }
+    .section-recoms__container__img-container:hover img {
+      transition: all .5s ease;
+      transform: scale(1);
+      opacity: .5; }
+    .section-recoms__container__img-container:hover p {
+      transition: all .5s ease;
+      z-index: 20;
+      color: white;
+      text-shadow: #AAAAAA; }
+  .section-recoms__container__img-container__img-hover-container p {
     text-align: justify; }
 
 .btn-primary:link, .btn-primary:visited {

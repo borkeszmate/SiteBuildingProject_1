@@ -12,6 +12,7 @@
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  
   position: relative;
 
   &__logoContainer{
@@ -155,7 +156,7 @@
     background-color: rgba($color-gray-primary,.2);
     transform: skewY(-4deg);
     // position: relative;
-    padding: 5rem 4rem;
+    padding: 4rem 4rem;
     
     &__anti-break-container{
       transform: skewY(4deg);
@@ -165,15 +166,20 @@
     &__img-container{
       position: relative;
       width: 100%;
-      
-      background-color: red;
-      &__test{
-        
-        -webkit-shape-outside: circle(50% at 50% 50%);
-        shape-outside: circle(50% at 50% 50%);
-      }
+      // padding: 5rem 0;
+      // -webkit-shape-outside: circle(50% at 50% 50%);
+      clip-path: circle(37%);
+      z-index: 200;
 
-      
+      &__img-hover-container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        background-color:black;
+      }
+            
       p{
         
         position: absolute;
@@ -182,28 +188,42 @@
         color: rgba(255, 255, 255, 0);
         transform: translate(-50%, -50%);
         font-size: 3rem;
-        transition: all .3s;
+        transition: all .5s ease;
       }
       img{
+        transition: all .5s ease;
+        // clip-path: polygon(20% 0, 80% 0, 80% 100%, 20% 100%);
         width: 100%;
+        transform: scale(1.2);
+        z-index: 2;
         
-
+        
       }
       
 
     }
     &__img-container:hover {
+      background-color: $color-primary;
+      z-index: 20;
 
       img{
-        
 
+        transition: all .5s ease;
+        transform: scale(1);
+        opacity: .5;
       }
+
+      
       
      p{
-      color: rgba(255, 255, 255, 100);
+      transition: all .5s ease;
+      z-index: 20;
+      color: white;
+      text-shadow: $color-gray-primary;
       } 
     }
-    &__text-container{
+    &__img-container__img-hover-container{
+
       p{
         text-align: justify;
       }
