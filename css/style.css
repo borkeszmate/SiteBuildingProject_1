@@ -507,10 +507,25 @@ body {
   width: 90%;
   display: block; }
 
+.form__label {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: black;
+  transition: all 0.5s; }
+
 .form__input:focus {
+  transition: all .9s;
   border-bottom: 3px solid #2ECC40;
   outline: none;
   box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.2); }
+
+.form__input:focus:invalid {
+  border-bottom: 3px solid #FF4136;
+  transition: all .9s; }
+
+.form__input:placeholder-shown ~ .form__label {
+  visibility: hidden;
+  opacity: 0; }
 
 .row {
   max-width: 130rem;

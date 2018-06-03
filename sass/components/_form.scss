@@ -36,25 +36,45 @@
 
 .form{
  
- &__group:not(:last-child){
-  z-index: 1000;
-  margin: 2rem 0;
- }
- &__input{
-  z-index: 1000;
-  font-size: 1.6rem;
-  font-family: inherit;
-  padding: 1.6rem 2rem;
-  border-radius: 2px;
-  background-color: rgba(white,1);
-  border: none;
-  border-bottom: 3px solid transparent;
-  width: 90%;
-  display: block;
- }
- &__input:focus{
-  border-bottom: 3px solid $color-green-1;
-  outline: none;
-  box-shadow: 0 1rem 1.5rem rgba(black, .2);
- }
+  &__group:not(:last-child){
+   z-index: 1000;
+   margin: 2rem 0;
+  }
+  &__input{
+   z-index: 1000;
+   font-size: 1.6rem;
+   font-family: inherit;
+   padding: 1.6rem 2rem;
+   border-radius: 2px;
+   background-color: rgba(white,1);
+   border: none;
+   border-bottom: 3px solid transparent;
+   width: 90%;
+   display: block;
+  }
+
+  &__label{
+   font-size: 1.5rem;
+   text-transform: uppercase;
+   color: black;
+   transition: all 0.5s;
+  }
+
+  &__input:focus{
+   transition: all .9s;
+   border-bottom: 3px solid $color-green-1;
+   outline: none;
+   box-shadow: 0 1rem 1.5rem rgba(black, .2);
+  }
+  &__input:focus:invalid{
+   border-bottom: 3px solid $color-red-primary;
+   transition: all .9s;
+
+  }
+  &__input:placeholder-shown ~ &__label{
+   visibility: hidden;
+   opacity: 0;
+  }
+
+
 }
