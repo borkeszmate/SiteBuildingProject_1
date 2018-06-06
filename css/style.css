@@ -249,6 +249,37 @@ body {
   background-image: linear-gradient(to right, #0074D9, #3D9970);
   padding: 20rem 0; }
 
+.footer {
+  padding: 5rem 0;
+  background-color: #AAAAAA;
+  color: #fff; }
+  .footer__imgContainer {
+    text-align: center;
+    padding: 2rem 0;
+    border-bottom: .5rem solid #fff; }
+    .footer__imgContainer img {
+      width: 50rem; }
+  .footer__nav-copy-Container {
+    padding-top: 5rem; }
+  .footer__li,
+  .footer a {
+    font-size: 2.5rem;
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    padding: 0 .5rem; }
+  .footer__li:not(:last-child) {
+    margin: 0rem 1.5rem; }
+  .footer li:hover {
+    background-image: linear-gradient(to right bottom, #0074D9, #3D9970); }
+  .footer__copyContainer__CopySign {
+    padding: 0 3rem;
+    font-size: 2.5rem; }
+  .footer__copyContainer__CopyText {
+    padding: 0 3rem;
+    font-size: 1.5rem;
+    text-align: justify; }
+
 .btn-primary:link, .btn-primary:visited {
   text-transform: uppercase;
   text-decoration: none;

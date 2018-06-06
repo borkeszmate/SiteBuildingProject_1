@@ -240,3 +240,52 @@
   
 }
 
+.footer{
+  padding: 5rem 0;
+  background-color: $color-gray-primary;
+  color: #fff;
+
+  &__imgContainer{
+    text-align: center;
+    padding: 2rem 0;
+    border-bottom: .5rem solid #fff;
+
+    img{
+      width: 50rem;
+    }
+  }
+
+  &__nav-copy-Container{
+    padding-top: 5rem;
+  }
+  
+  &__li,
+  a{
+    font-size: 2.5rem;
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    padding: 0 .5rem;
+  }
+  &__li:not(:last-child){
+    margin: 0rem 1.5rem;
+  }
+  li:hover{
+    background-image: linear-gradient(to right bottom, $color-primary, $color-secondary);
+
+  }
+
+  &__copyContainer{
+    
+    
+    &__CopySign{
+      padding: 0 3rem;
+      font-size: 2.5rem;
+    }
+    &__CopyText{
+      padding: 0 3rem;
+      font-size: 1.5rem;
+      text-align: justify;
+    }
+  }
+}
