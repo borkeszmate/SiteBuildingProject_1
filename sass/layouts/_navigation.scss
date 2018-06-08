@@ -1,0 +1,92 @@
+.navigation{
+
+ &__checkbox{
+  // display: none;
+ }
+
+ &__button{
+  position: fixed;
+  top: 4.5rem;
+  right: 3.5rem;
+  width: 7rem;
+  height: 7rem;
+  background-color: white;
+  z-index: 2002;
+  border-radius: 50%;
+  box-shadow: 1px 1px 1px $color-gray-primary;
+ }
+ 
+ &__background{
+  position: fixed;
+  top: 5rem;
+  right: 4rem;
+  border-radius: 50%;
+  height: 6rem;
+  width: 6rem;
+  z-index: 2000;
+  background-image:radial-gradient($color-primary, $color-secondary );
+  transition: all .3s;
+ }
+
+ &__nav{
+
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2001;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .2s;
+
+  &__nav-list{
+
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+
+   
+   li{
+    border-bottom: solid .3rem transparent;    
+    list-style-type:none;
+    transition: all .3s;
+    margin: 2rem 3rem;
+
+    span{
+     margin-right: 3rem;
+    }
+   }
+   
+   a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-style: inherit;
+    color: white;
+    font-size: 2.5rem;
+
+   }
+
+   li:hover{
+    border-bottom: solid .3rem white;
+    transition: all .3s;
+   }
+  }
+
+
+ }
+
+ &__checkbox:checked ~ &__background {
+
+   transform: scale(70);
+   transition: all 0.3s;
+ }
+
+ &__checkbox:checked ~ &__nav {
+   opacity: 100;
+   visibility: visible;
+   transition: all .2s;
+ }
+
+}

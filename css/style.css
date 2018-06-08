@@ -599,3 +599,66 @@ body {
     width: calc(( 100% - 2rem)* (2/ 3)); }
   .row .col-3-of-4 {
     width: calc(( 100% - 2rem)* (3 / 4)); }
+
+.navigation__button {
+  position: fixed;
+  top: 4.5rem;
+  right: 3.5rem;
+  width: 7rem;
+  height: 7rem;
+  background-color: white;
+  z-index: 2002;
+  border-radius: 50%;
+  box-shadow: 1px 1px 1px #AAAAAA; }
+
+.navigation__background {
+  position: fixed;
+  top: 5rem;
+  right: 4rem;
+  border-radius: 50%;
+  height: 6rem;
+  width: 6rem;
+  z-index: 2000;
+  background-image: radial-gradient(#0074D9, #3D9970);
+  transition: all .3s; }
+
+.navigation__nav {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2001;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .2s; }
+  .navigation__nav__nav-list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .navigation__nav__nav-list li {
+      border-bottom: solid .3rem transparent;
+      list-style-type: none;
+      transition: all .3s;
+      margin: 2rem 3rem; }
+      .navigation__nav__nav-list li span {
+        margin-right: 3rem; }
+    .navigation__nav__nav-list a {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-style: inherit;
+      color: white;
+      font-size: 2.5rem; }
+    .navigation__nav__nav-list li:hover {
+      border-bottom: solid .3rem white;
+      transition: all .3s; }
+
+.navigation__checkbox:checked ~ .navigation__background {
+  transform: scale(70);
+  transition: all 0.3s; }
+
+.navigation__checkbox:checked ~ .navigation__nav {
+  opacity: 100;
+  visibility: visible;
+  transition: all .2s; }
