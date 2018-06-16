@@ -1,0 +1,37 @@
+.popup{
+ background-color: rgba($color-black-1, .9);
+ height: 100vh;
+ width: 100%;
+ position: fixed;
+ top: 0;
+ left: 0;
+ z-index: 5000;
+ visibility: hidden;
+ opacity: 0;
+ transition: all .5s;
+
+ 
+ &__card{
+  width: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: $color-white-snow;
+  padding: 5rem 5rem;
+  border-radius: 3px;
+  box-shadow: 10px 11px 39px -12px black;
+  img{
+   width: 100%;
+  }
+
+  &__closeIcon{
+   position: absolute;
+   top: 4rem;
+   right: 4rem;
+   font-size: 2rem;
+   text-decoration: none;
+  }
+ }
+
+}

@@ -575,6 +575,36 @@ body {
   text-align: center;
   font-size: 2rem; }
 
+.popup {
+  background-color: rgba(17, 17, 17, 0.9);
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5000;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s; }
+  .popup__card {
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #F5F5F5;
+    padding: 5rem 5rem;
+    border-radius: 3px;
+    box-shadow: 10px 11px 39px -12px black; }
+    .popup__card img {
+      width: 100%; }
+    .popup__card__closeIcon {
+      position: absolute;
+      top: 4rem;
+      right: 4rem;
+      font-size: 2rem;
+      text-decoration: none; }
+
 .row {
   max-width: 130rem;
   margin: 0 auto;
