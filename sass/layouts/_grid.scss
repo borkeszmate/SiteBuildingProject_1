@@ -2,8 +2,12 @@
 @include clearfix;
  max-width: $col-width;
  margin: 0 auto;
- 
  padding: 2rem;
+ @include respond(phone){
+   width: $col-width-phone;
+   padding: 1rem 0;
+ }
+
  &:not(:last-child){
   margin-bottom: $vertical-gutter;
  }
@@ -14,6 +18,11 @@
 
     &:not(:last-child){
      margin-right: $horizontal-gutter;
+    }
+    @include respond(tab-port){
+      width: 100% !important;
+      margin: .5rem 0;
+      
     }
 }
 

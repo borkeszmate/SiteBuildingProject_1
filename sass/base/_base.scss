@@ -6,14 +6,43 @@
 }
 
 html{
-  font-size: 62.5%
+  font-size: 62.5%; // 10px/16px = 62.5%
+
+  @include respond(big-desktop){
+    font-size: 75%;
+  }
+  @include respond(tab-land){
+    font-size: 62.5%;
+  }
+  
+  @include respond(tab-port){
+    font-size: 56.25%;
+  }
+  
+  
+  @include respond(phone){
+    font-size: 50%;
+  }
+
+
 
 }
 
 body{
-
-  
   padding:3rem;
   overflow-x: hidden;
   box-sizing: border-box;
+
+  @include respond(tab-land){
+    padding: 2rem; 
+  }
+
+  @include respond(tab-port){
+    padding: 1rem;
+  }
+  @include respond(phone){
+    padding: .1rem;
+
+  }
+
 }
