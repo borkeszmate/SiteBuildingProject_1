@@ -15,6 +15,12 @@
   border-radius: 50%;
   box-shadow: 1px 1px 1px $color-gray-primary;
   cursor: pointer;
+
+  @include respond(phone){
+    top: 3.5rem;
+    right: 3rem;
+
+  }
   
  }
  
@@ -28,6 +34,12 @@
   z-index: 2000;
   background-image:radial-gradient($color-primary, $color-secondary );
   transition: all .3s;
+
+  @include respond(phone){
+    top: 4rem;
+    right: 3rem;
+  }
+
  }
 
  &__nav{

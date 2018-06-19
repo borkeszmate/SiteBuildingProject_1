@@ -21,7 +21,10 @@
     }
     @include respond(tab-port){
       width: 100% !important;
-      margin: .5rem 0;
+      margin: 1rem auto;
+      padding: 0 .5rem;
+      
+
       
     }
 }
